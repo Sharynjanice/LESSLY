@@ -153,10 +153,15 @@ contactForm.addEventListener('submit', (e) => {
     }
 
     // Validation du téléphone italien
-    const phoneRegex = /^(\+39)?\s?3\d{2}[\s.-]?\d{3}[\s.-]?\d{3}$/;
-    if (!phoneRegex.test(telephone.replace(/\s|-|\./g, ''))) {
-        alert('Please enter a valid Italian phone number.');
-        return;
+    const phoneRegex = /^(\+39)?3\d{9}$/;
+
+const cleanPhone = telephone.replace(/\s|-|\./g, '');
+
+if (!phoneRegex.test(cleanPhone)) {
+    alert('Please enter a valid Italian phone number.');
+    return;
+}
+
     }
 
     // Ici, vous pouvez ajouter l'envoi du formulaire à un service backend
