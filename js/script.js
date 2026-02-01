@@ -231,7 +231,7 @@ function generateWhatsAppMessage(name = '', hairstyle = '', message = '') {
 whatsappBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const message = generateWhatsAppMessage();
-    whatsappBtn.href = `https://wa.me/393XXXXXXXXX?text=${message}`;
+    whatsappBtn.href = `https://wa.me/393500381955?text=${message}`;
 });
 
 // Form WhatsApp button
@@ -241,7 +241,7 @@ whatsappFormBtn.addEventListener('click', () => {
     const message = document.getElementById('message').value.trim();
 
     const whatsappMessage = generateWhatsAppMessage(name, hairstyle, message);
-    const whatsappUrl = `https://wa.me/393XXXXXXXXX?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/393500381955?text=${whatsappMessage}`;
     window.open(whatsappUrl, '_blank');
 });
 
